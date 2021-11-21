@@ -3,18 +3,21 @@ app = Flask(__name__)
 print(__name__)
 
 @app.route('/')
-def hello_world():
-    print(url_for('static', filename='bonefire.cio'))
+def my_home():
     return render_template('index.html')
 
 @app.route('/about.html')
-def about():
+def about_me():
     return render_template('about.html')
 
-@app.route('/blog')
-def blog():
-    return 'These are my thoughts'
+@app.route('/works.html')
+def my_works():
+    return render_template('works.html')
 
-@app.route('/blog/2020/dogs')
-def blog2():
-    return 'This is my dog'
+@app.route('/contact.html')
+def my_contact():
+    return render_template('contact.html')
+
+@app.route('/components.html')
+def my_components():
+    return render_template('components.html')
